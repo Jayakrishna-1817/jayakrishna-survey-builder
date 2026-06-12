@@ -61,6 +61,7 @@ function Index() {
   })
 
   if (!user) {
+    navigate({ to: '/login' })
     return null
   }
 
