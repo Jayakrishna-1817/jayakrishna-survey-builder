@@ -30,11 +30,12 @@ const SSurveyIdRoute = SSurveyIdRouteImport.update({
   path: '/s/$surveyId',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SurveysSurveyIdResponsesRoute = SurveysSurveyIdResponsesRouteImport.update({
-  id: '/surveys/$surveyId/responses',
-  path: '/surveys/$surveyId/responses',
-  getParentRoute: () => rootRouteImport,
-} as any)
+const SurveysSurveyIdResponsesRoute =
+  SurveysSurveyIdResponsesRouteImport.update({
+    id: '/surveys/$surveyId/responses',
+    path: '/surveys/$surveyId/responses',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const SurveysSurveyIdEditRoute = SurveysSurveyIdEditRouteImport.update({
   id: '/surveys/$surveyId/edit',
   path: '/surveys/$surveyId/edit',
@@ -72,7 +73,12 @@ export interface FileRouteTypes {
     | '/surveys/$surveyId/edit'
     | '/surveys/$surveyId/responses'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/login' | '/s/$surveyId' | '/surveys/$surveyId/edit' | '/surveys/$surveyId/responses'
+  to:
+    | '/'
+    | '/login'
+    | '/s/$surveyId'
+    | '/surveys/$surveyId/edit'
+    | '/surveys/$surveyId/responses'
   id:
     | '__root__'
     | '/'
